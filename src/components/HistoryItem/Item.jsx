@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Item = ({type, amount, currency}) => {
     return  <thead>
     <tr>
@@ -7,3 +9,10 @@ export const Item = ({type, amount, currency}) => {
     </tr>
   </thead>
 }
+
+
+Item.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+};

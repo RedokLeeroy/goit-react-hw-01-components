@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Stats } from "components/Stats/Stats"
 export const Stat = ({data}) => {
     return(
@@ -6,3 +8,11 @@ export const Stat = ({data}) => {
         </ul>
     )
 }
+
+Stat.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ),
+};
