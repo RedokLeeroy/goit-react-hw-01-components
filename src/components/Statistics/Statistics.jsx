@@ -8,5 +8,6 @@ return <section className={s.statistics}>
 }
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 };

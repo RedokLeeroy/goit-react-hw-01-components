@@ -1,7 +1,7 @@
-import User from "../components/data/User";
-import Friends from "../components/data/Friends"
-import Data from "../components/data/Data"
-import Transactions from "../components/data/Transactions"
+import User from "../data/User";
+import Friends from "../data/Friends"
+import Data from "../data/Data"
+import Transactions from "../data/Transactions"
 import { Profile } from "./Profile/Profile";
 import { Statistics } from "./Statistics/Statistics";
 import { Stat } from "./Stat/Stat";
@@ -11,7 +11,7 @@ import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
 export const App = () => {
   return <>
   <Profile data={User}></Profile>
-  <Statistics title="title">
+  <Statistics title="upload stats">
     <Stat data={Data}></Stat>
   </Statistics>
   <FriendsList friend = {Friends}>
