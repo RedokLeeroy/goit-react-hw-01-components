@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
+import s from "./Item.module.css"
 
 export const Item = ({type, amount, currency}) => {
-    return  <thead>
-    <tr>
-      <th>{type}</th>
+    return<tr className={s.row}>
+      <th >{type}</th>
       <th>{amount}</th>
       <th>{currency}</th>
     </tr>
-  </thead>
+
 }
 
 

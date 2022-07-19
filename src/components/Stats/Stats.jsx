@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
+import s from "./Stats.module.css"
+import random from "../randomFolder/randomColor"
 
 export const Stats = ({label, percentage}) => {
-    return <li class="item">
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}</span>
+    return <li className={s.item} style= {{backgroundColor: `${random()}`}}>
+      <span className={s.label}>{label}</span>
+      <span className={s.percentage}>{percentage}</span>
     </li>
 }
 
