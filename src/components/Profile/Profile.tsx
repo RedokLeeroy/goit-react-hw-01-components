@@ -7,7 +7,7 @@ interface IStats {
   likes: number
 }
 
-interface IData {
+interface IProp {
   data:{
   username: string,
   location: string,
@@ -17,7 +17,7 @@ interface IData {
   }
 }
 
-export const Profile: React.FunctionComponent<IData> = ({ data }) => {
+export const Profile = ({ data }: IProp): JSX.Element => {
   const { username, tag, location, avatar, stats } = data;
   const { followers, views, likes } = stats;
   return (

@@ -8,7 +8,7 @@ interface IProp{
   currency: string
 }
 
-export const Item: React.FunctionComponent<IProp> = ({ type, amount, currency }) => {
+export const Item= ({ type, amount, currency }: IProp):JSX.Element => {
   return (
     <tr className={s.row}>
       <th>{type}</th>

@@ -1,8 +1,19 @@
-import PropTypes from 'prop-types';
 import s from './TransactionHistory.module.css';
 import { Item } from '../HistoryItem/Item';
+import React from 'react';
 
-export const TransactionHistory = ({ history }) => {
+interface IData{
+  id: string,
+  type: string,
+  amount: string,
+  currency: string
+}
+
+interface IProp {
+  history: IData[]
+}
+
+export const TransactionHistory = ({ history }: IProp): JSX.Element => {
   return (
     <table className={s.transactionHistory}>
       <thead className={s.header}>
@@ -19,12 +30,4 @@ export const TransactionHistory = ({ history }) => {
       </tbody>
     </table>
   );
-};
-
-TransactionHistory.propTypes = {
-  history: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    })
-  ),
 };

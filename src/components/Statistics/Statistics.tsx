@@ -6,10 +6,10 @@ interface IProp {
   children: JSX.Element;
 }
 
-export const Statistics: React.FunctionComponent<IProp> = ({
+export const Statistics = ({
   title,
   children,
-}) => {
+}:IProp):JSX.Element => {
   return (
     <section className={s.statistics}>
       {title && <h2 className={s.title}>{title}</h2>}

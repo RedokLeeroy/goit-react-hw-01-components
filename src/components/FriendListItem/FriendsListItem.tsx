@@ -7,7 +7,7 @@ interface IProps {
   isOnline: boolean
 }
 
-export const FriendsListItem: React.FunctionComponent<IProps> = ({avatar, name, isOnline}) => {
+export const FriendsListItem = ({avatar, name, isOnline}:IProps):JSX.Element => {
     return <li className={s.item}>
   <span className={isOnline? s.online:s.offline}></span>
   <img className={s.avatar} src={avatar} alt="User avatar" width="48" />

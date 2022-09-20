@@ -7,10 +7,10 @@ interface IProp {
   percentage: number;
 }
 
-export const Stats: React.FunctionComponent<IProp> = ({
+export const Stats = ({
   label,
   percentage,
-}) => {
+}:IProp):JSX.Element => {
   return (
     <li className={s.item} style={{ backgroundColor: `${random()}` }}>
       <span className={s.label}>{label}</span>

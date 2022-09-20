@@ -2,17 +2,17 @@ import s from './Stat.module.css';
 import { Stats } from '../Stats/Stats';
 import React from 'react';
 
-interface IProp {
+interface IData {
   id:string,
   label: string,
   percentage: number
 }
 
-interface IData {
-  data: IProp[];
+interface IProp {
+  data: IData[];
 }
 
-export const Stat: React.FunctionComponent<IData> = ({ data }) => {
+export const Stat = ({ data }:IProp):JSX.Element => {
   return (
     <ul className={s.statList}>
       {data.map(({ id, label, percentage }) => (
