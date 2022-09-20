@@ -1,5 +1,5 @@
 import s from './Stats.module.css';
-import random from "../randomFolder/randomColor.js"
+import random from "../randomFolder/randomColor"
 import React from 'react';
 
 interface IProp {
